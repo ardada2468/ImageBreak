@@ -6,6 +6,7 @@ include CONTRIBUTING.md
 include CLI_INTEGRATION_SUMMARY.md
 recursive-include examples *.sh *.md
 recursive-include imagebreak *.py
+recursive-include imagebreak/ui *.py
 recursive-exclude tests *
 exclude .cursorignore
 exclude .gitignore

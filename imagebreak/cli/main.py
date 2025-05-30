@@ -597,18 +597,46 @@ def web_ui(ctx, host, port, browser, theme, headless):
     click.echo(f"   🔌 Port: {port}")
     click.echo(f"   🌐 URL: http://{host}:{port}")
     
-    # Find the streamlit app file
-    current_dir = Path(__file__).parent.parent.parent  # Go up to project root
-    streamlit_app = current_dir / "streamlit_app.py"
+    # Find the streamlit app - try multiple methods
+    streamlit_app = None
     
-    if not streamlit_app.exists():
-        click.echo(f"❌ Streamlit app not found at {streamlit_app}")
-        click.echo("💡 Make sure streamlit_app.py is in the project root directory")
+    # Method 1: Package installation (when installed via pip)
+    try:
+        import imagebreak.ui.streamlit_app
+        # Get the module file path
+        streamlit_app = imagebreak.ui.streamlit_app.__file__
+        click.echo(f"   📦 Found Streamlit app in package: {streamlit_app}")
+    except ImportError:
+        pass
+    
+    # Method 2: Development mode (project root - legacy)
+    if not streamlit_app:
+        current_dir = Path(__file__).parent.parent.parent
+        dev_streamlit_app = current_dir / "streamlit_app.py"
+        if dev_streamlit_app.exists():
+            streamlit_app = str(dev_streamlit_app)
+            click.echo(f"   🔧 Found Streamlit app in development (root): {streamlit_app}")
+    
+    # Method 3: Development mode (new location)
+    if not streamlit_app:
+        current_dir = Path(__file__).parent.parent.parent
+        new_streamlit_app = current_dir / "imagebreak" / "ui" / "streamlit_app.py"
+        if new_streamlit_app.exists():
+            streamlit_app = str(new_streamlit_app)
+            click.echo(f"   🔧 Found Streamlit app in development (ui): {streamlit_app}")
+    
+    if not streamlit_app:
+        click.echo("❌ Streamlit app not found!")
+        click.echo("💡 Tried the following locations:")
+        click.echo("   - Package installation (imagebreak.ui.streamlit_app)")
+        click.echo("   - Development mode (streamlit_app.py in project root)")
+        click.echo("   - Development mode (imagebreak/ui/streamlit_app.py)")
+        click.echo("🔧 Please ensure the imagebreak package is properly installed")
         return
     
     # Build streamlit command
     cmd = [
-        sys.executable, "-m", "streamlit", "run", str(streamlit_app),
+        sys.executable, "-m", "streamlit", "run", streamlit_app,
         "--server.address", host,
         "--server.port", str(port)
     ]

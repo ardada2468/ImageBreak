@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="imagebreak",
-    version="1.0.0",
+    version="1.0.1",
     author="ImageBreak Contributors",
     author_email="ardada2468@gmail.com",
     description="A comprehensive framework for testing AI model safety and content moderation systems",

@@ -5,7 +5,7 @@ This package provides tools to evaluate how well AI models handle potentially ha
 prompts and helps researchers identify vulnerabilities in content filtering systems.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "ImageBreak Contributors"
 __email__ = "ardada2468@gmail.com"
 
