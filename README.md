@@ -3,7 +3,9 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**ImageBreak** is a comprehensive framework for testing AI model safety and content moderation systems. It provides tools to evaluate how well AI models handle potentially harmful prompts and helps researchers identify vulnerabilities in content filtering systems.
+**ImageBreak** is a comprehensive framework for testing AI model safety and content moderation systems. It provides tools to evaluate how well AI models handle potentially harmful prompts and helps researchers identify vulnerabilities in content filtering systems. It is based from the following reaserch paper: https://github.com/ardada2468/ImageBreak/blob/63a9403cb4410b8bc7dffad2e9c74c14e5027e0c/CMSC396H_Final_Paper%20(3).pdf
+
+
 
 ## ⚠️ Important Notice
 
