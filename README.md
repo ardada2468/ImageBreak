@@ -35,7 +35,7 @@ This tool is designed **exclusively for research purposes** to improve AI safety
 
 ### From PyPI (when published)
 ```bash
-pip install imagebreak
+pip install imagebreak==1.0.1
 ```
 
 ### From Source
@@ -338,8 +338,6 @@ analyzer = HuggingFaceImageAnalyzer(
 )
 ```
 
-## 🆕 Version 2.0 Features
-
 ### Cyclic Image Generation
 - **Quality-Based Retries**: Automatically retry generation if image quality is below threshold
 - **HuggingFace Integration**: Uses BLIP-2 and other vision models for uncensored quality assessment
@@ -422,6 +420,13 @@ IMAGE_ANALYSIS_SYSTEM_INSTRUCTION=Custom instruction for image analysis...
 ```
 
 ## 🔧 Troubleshooting
+
+### Numpy Issues
+Install this version of numpy (using the command below). Create a venv if you need to use another version of numpy for your base python install
+```
+pip install numpy==1.26.4 
+```
+
 
 ### OpenAI Content Policy Violations
 
