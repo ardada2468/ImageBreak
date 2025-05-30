@@ -530,24 +530,4 @@ pytest tests/
 pytest --cov=imagebreak tests/  # With coverage
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI for their API and safety research
-- Google for Gemini API access  
-- HuggingFace for vision-language models
-- AWS for Rekognition services
-- The AI safety research community
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/imagebreak/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/imagebreak/discussions)
-- **Email**: [imagebreak@example.com](mailto:imagebreak@example.com)
-
----
-
 **Remember**: This tool is for research purposes only. Please use responsibly and in accordance with all applicable laws and ethical guidelines. 
