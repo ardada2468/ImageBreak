@@ -25,6 +25,12 @@ This tool is designed **exclusively for research purposes** to improve AI safety
 - **Streamlit Web UI**: User-friendly interface for configuration and testing
 - **Optional AWS Integration**: Built-in support for AWS Rekognition for content analysis
 
+## Web UI View
+
+<img width="1791" alt="image" src="https://github.com/user-attachments/assets/071e74d2-bde8-4468-a55a-1aadd923baa6" />
+<img width="1791" alt="image" src="https://github.com/user-attachments/assets/69fdad88-6413-48a5-be39-5416703a331a" />
+
+
 ## 🔧 Installation
 
 ### From PyPI (when published)
