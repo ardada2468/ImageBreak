@@ -35,7 +35,7 @@ This tool is designed **exclusively for research purposes** to improve AI safety
 
 ## 🔧 Installation
 
-### From PyPI (when published)
+### From PyPI 
 ```bash
 pip install imagebreak==1.0.1
 ```
