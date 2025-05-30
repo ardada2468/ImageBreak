@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagebreak"
+description = "A comprehensive framework for testing AI model safety and content moderation systems"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "ImageBreak Contributors", email = "ardada2468@gmail.com"}
+]
+keywords = ["ai safety", "content moderation", "image generation", "openai", "dalle", "boundary testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers", 
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9", 
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+]
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/ardada2468/imagebreak"
+Repository = "https://github.com/ardada2468/imagebreak"
+Issues = "https://github.com/ardada2468/imagebreak/issues"
+Documentation = "https://github.com/ardada2468/imagebreak#readme"
+
+[project.scripts]
+imagebreak = "imagebreak.cli.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0", 
+    "black>=21.0",
+    "flake8>=3.8",
+    "isort>=5.0",
+]
+aws = [
+    "boto3>=1.26.0",
+]
+full = [
+    "boto3>=1.26.0",
+    "torch",
+    "torchvision",
+    "transformers", 
+    "accelerate",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "imagebreak.__version__"}
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["imagebreak*"]
+
+[tool.setuptools.package-data]
+imagebreak = ["*.txt", "*.md"] 

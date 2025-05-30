@@ -1,0 +1,15 @@
+include README.md
+include LICENSE
+include requirements.txt
+include env.example
+include CONTRIBUTING.md
+include CLI_INTEGRATION_SUMMARY.md
+recursive-include examples *.sh *.md
+recursive-include imagebreak *.py
+recursive-exclude tests *
+exclude .cursorignore
+exclude .gitignore
+exclude CMSC396H_Final_Paper*.pdf
+exclude unethical_prompt_generator.py
+exclude moderation_detector_pipeline.py
+exclude prompt_alteration_pipeline.py 

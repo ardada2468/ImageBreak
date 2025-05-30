@@ -159,4 +159,9 @@ reports/
 
 # Backup files
 *.bak
-*.backup 
+*.backup
+
+# PyPI and packaging
+.pypirc
+twine.conf 
+PUBLISHING.md
